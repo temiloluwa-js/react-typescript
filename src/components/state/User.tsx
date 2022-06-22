@@ -13,7 +13,7 @@ export const User = () => {
     });
   };
   const handleLogOut = () => {
-    setUser(null);
+    setUser(null)
   };
 
   return (
