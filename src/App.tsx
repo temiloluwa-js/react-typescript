@@ -19,6 +19,8 @@ function App() {
   //   lastname: 'Wayne'
   // }
 
+  /**Setter functions in React have a Typescript type of React.Dispatch<React.SetStateAction<the type of the actual state e.g string, boolean>>*/
+
   const personList = [
     { first: "Vishwas", last: "Ogbeni" },
     { first: "Salma", last: "Widad" },
