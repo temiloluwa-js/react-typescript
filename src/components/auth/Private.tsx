@@ -1,18 +1,18 @@
-import React from 'react'
 import Login from './Login'
 import {ProfileProps} from './Profile'
-
 type PrivateProps = {
-    isLoggedIn: boolean,
-    component: React.ComponentType<ProfileProps>
+  isLoggedIn: boolean
+  /**this is how you type a component. 
+   * the React.Component is for the component 
+   * itself and ProfileProps is for any variable
+   *  that might be passed in */
+  component: React.ComponentType<ProfileProps>
 }
 
-const Private = ({isLoggedIn, component: Component}: PrivateProps) => {
+export default function Private({isLoggedIn, component: Component}: PrivateProps) {
   if (isLoggedIn){
     return <Component name="Vishwas"/>
   }else{
     return <Login/>
   }
 }
-
-export default Private

@@ -1,17 +1,14 @@
-import React from "react";
-import { useRef, useEffect } from "react";
+import React, { useEffect, useRef } from 'react'
 
-const DomRef = () => {
-  const inputRef = useRef<HTMLInputElement>(null);
+export default function DomRef() {
+  const inputRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
-    inputRef.current?.focus();
-  }, []);
+    inputRef.current?.focus()
+  }, [])
   return (
     <div>
       <input type="text" ref={inputRef} />
     </div>
-  );
-};
-
-export default DomRef;
+  )
+}
