@@ -1,14 +1,10 @@
 import "./App.css";
-import { UserContextProvider } from "./components/context/UserContext";
-import User from './components/context/User'
-
+import { RandomNumber } from "./restriction/RandomNumber";
 
 function App() {
   return (
     <div className="App">
-      <UserContextProvider>
-        <User/> 
-      </UserContextProvider>
+      <RandomNumber value={10} isPositive />
     </div>
   );
 }
