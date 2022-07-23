@@ -11,7 +11,16 @@ export const User = () => {
    *  to specify what is going to be
    *  in the state when a user fills 
    * in something */
-  
+
+  /**if there is a scenario when the user becomes
+   *  filled i.e not null immeditately after the code
+   *  is loaded and there is no logout component
+   *  that allows the user to  revert back to null,
+   *  you can use type assertion for the state */
+  /**type assertion style */
+  const [newUser, setNewUser] = useState<AuthUser>({} as AuthUser)
+
+  /**user future value style*/
   const [user, setUser] = useState<AuthUser | null>(null);
   const handleLogin = () => {
     setUser({
